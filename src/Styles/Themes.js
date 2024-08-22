@@ -1,16 +1,17 @@
-import { slate, orange, slateDark, orangeDark} from '@radix-ui/colors';
+import { blackA, orange, orangeDark} from '@radix-ui/colors';
 
 export const Light = {
-    Font1: "cinzel",
-    Font2: "grandstander",
+    Font1: "sirin stencil",
+    Font2: 'Cinzel Variable',
 
     colors: {
-        ...slate,
-        ...orange
+        ...blackA,
+        ...orange,
     },
 
-    Body: slate.slate11,
-    
+    Body: blackA.blackA10,
+    TextColor: orange.orange7,
+    Color: orange.orange1,
 };
   
 export const Dark = {
@@ -18,7 +19,11 @@ export const Dark = {
     Font2: "grandstander",
 
     colors: {
-        ...slateDark,
+        ...blackA,
         ...orangeDark,
     },
+
+    Body: blackA.blackA10,
+    TextColor: orange.orange7,
+    Color: orange.orange1,
 };

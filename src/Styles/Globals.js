@@ -1,8 +1,8 @@
 import { createGlobalStyle } from "styled-components";
-import "@fontsource-variable/cinzel";
-import "@fontsource-variable/grandstander";
+import '@fontsource-variable/cinzel';
+import "@fontsource/sirin-stencil";
 
-const GlobalStyles = createGlobalStyle`
+const Globals = createGlobalStyle`
     *{
       margin: 0;
       padding: 0;
@@ -14,13 +14,13 @@ const GlobalStyles = createGlobalStyle`
     }
 
     ::-webkit-scrollbar-thumb {
-    background-color: #000;
+    background-color: ${props => props.theme.TextColor};
     border-radius: 6px;
-    border: 2px solid #f1f1f1;
+    border: 2px solid;
     }
 
     ::-webkit-scrollbar-track {
-    background-color: #fff;
+    background-color: ${props => props.theme.Body};
     }
 
     body {
@@ -30,4 +30,4 @@ const GlobalStyles = createGlobalStyle`
     }
 `;
 
-export default GlobalStyles;
+export default Globals;
