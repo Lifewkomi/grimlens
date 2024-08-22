@@ -25,7 +25,7 @@ const Globals = createGlobalStyle`
 
     body {
     scrollbar-width: thin;
-    scrollbar-color: #000 #f1f1f1;
+    scrollbar-color: ${props => props.theme.TextColor};
     background-color: ${props => props.theme.Body};
     }
 `;

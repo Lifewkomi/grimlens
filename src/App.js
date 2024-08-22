@@ -4,9 +4,10 @@ import { Light, Dark } from './Styles/Themes';
 import Lenis from 'lenis';
 import { useEffect, useState} from 'react';
 
-
-import Home from "./components/Home";
 import Navbar from "./components/FloatingNavbar/Demo";
+import Home from "./components/Home";
+import Gallery from "./components/Gallery";
+
 function App() {
 
   useEffect(() => {
@@ -29,6 +30,7 @@ function App() {
         <main className='App'>
           <Navbar />
           <Home />
+          <Gallery />
         </main>
     </ThemeProvider>
     </>
