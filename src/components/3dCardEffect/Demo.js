@@ -1,6 +1,6 @@
 import React from "react";
 import { CardBody, CardContainer, CardItem } from "./3dCardEffect";
-import Image from "../../Assets/1.jpg";
+import Image from "../../Assets/1.webp";
 
 export default function ThreeDCardDemo() {
   return (

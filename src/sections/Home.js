@@ -1,12 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import ThreeD from './3dCardEffect/Demo';
-import LayoutGrid from './LayoutGrid/Demo';
 
-import img1 from '../Assets/1.jpg';
+import img1 from '../Assets/1.webp';
 import img2 from '../Assets/2.jpg';
 import img3 from '../Assets/3.jpg';
-import img4 from '../Assets/4.jpg';
+import img4 from '../Assets/4.webp';
 import img5 from '../Assets/5.jpg';
 import img6 from '../Assets/6.jpg';
 import img7 from '../Assets/7.jpg';
@@ -14,11 +12,9 @@ import img8 from '../Assets/8.jpg';
 import img9 from '../Assets/9.jpg';
 import img13 from '../Assets/13.jpg';
 
-
-
 const Section = styled.section`
-  background-color: ${(props) => props.theme.Body};
-  min-height: 100vh;
+  background-color: ${props => props.theme.Body};
+  min-height: 150vh;
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -27,7 +23,7 @@ const Section = styled.section`
 `;
 const IntroText = styled.div`
 flex-basis: 48%;
-/* max-width: 60%; */
+max-width: 60%;
 display: flex;
 flex-direction: column;
 margin-top: 12rem;
@@ -109,11 +105,14 @@ const ImageRow = styled.div`
   }
 
   &:nth-child(2) {
-    transform: translateX(-5%);
+    transform: translateX(-7%);
+    transform: translateY(-10%);
   }
 
   &:nth-child(3) {
-    transform: translateX(12%);
+    transform: translateX(10%);
+    transform: translateY(-20%);
+
   }
 `;
 const ImageItem = styled.img`
@@ -131,7 +130,7 @@ const Home = () => {
   return (
     <Section>
       <IntroText>
-        <Title>Grimlens</Title>
+        <Title>GrimLens</Title>
         <Subtitle>
             Welcome to the official Grimlens Automotive Photography Portfolio website!
             This project showcases the dynamic and captivating automotive photography by Grimlens, featuring sleek animations and a smooth user experience.

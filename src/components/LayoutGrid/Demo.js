@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import LayoutGrid from "../LayoutGrid/LayoutGrid";
-import Image1 from "../../Assets/1.jpg";
+import Image1 from "../../Assets/1.webp";
 import Image2 from "../../Assets/2.jpg";
 
 

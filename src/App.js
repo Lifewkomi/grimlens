@@ -5,8 +5,9 @@ import Lenis from 'lenis';
 import { useEffect, useState} from 'react';
 
 import Navbar from "./components/FloatingNavbar/Demo";
-import Home from "./components/Home";
-import Gallery from "./components/Gallery";
+import Home from "./sections/Home";
+import About from "./sections/About";
+import Contact from './sections/Contact';
 
 function App() {
 
@@ -30,7 +31,8 @@ function App() {
         <main className='App'>
           <Navbar />
           <Home />
-          <Gallery />
+          <About />
+          <Contact />
         </main>
     </ThemeProvider>
     </>

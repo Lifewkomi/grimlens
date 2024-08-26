@@ -9,7 +9,7 @@ export const Light = {
         ...orange,
     },
 
-    Body: blackA.blackA10,
+    Body: blackA.blackA11,
     TextColor: orange.orange7,
     Color: orange.orange1,
 };
