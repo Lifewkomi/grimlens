@@ -31,8 +31,8 @@ align-items: center;
 `
 
 const Title = styled.h1`
-  font-family: ${props => props.theme.Font1};
-  font-size: 10rem;
+  font-family: ${props => props.theme.Font2};
+  font-size: clamp(35px, 10vw, 480px);
   color: ${props => props.theme.TextColor};
   text-align: center;
   font-weight: bolder;
