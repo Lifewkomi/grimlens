@@ -8,6 +8,7 @@ import Navbar from "./components/FloatingNavbar/Demo";
 import Home from "./sections/Home";
 import About from "./sections/About";
 import Contact from './sections/Contact';
+import Footer from './sections/Footer';
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
           <Home />
           <About />
           <Contact />
+          <Footer />
         </main>
     </ThemeProvider>
     </>

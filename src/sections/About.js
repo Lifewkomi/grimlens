@@ -9,7 +9,7 @@ const Section = styled.section`
   h1 {
     font-family: ${(props) => props.theme.Font2};
     font-size: clamp(35px, 10vw, 480px);
-    color: ${(props) => props.theme.TextColor};
+    color: rgb(255,255,255,0.8);
     font-weight: bold;
   }
   @media screen and (max-width: 480px){
@@ -27,8 +27,8 @@ position: relative;
 width: 60%;
 left: 30rem;
 @media screen and (max-width: 480px){
-  left: 8px;
-  width: 95%;
+  left: 0px;
+  width: 100%;
 }
 `;
 
@@ -78,8 +78,13 @@ const Button4 = styled.button`
     font-size: 1.5rem;
     line-height: 1rem;
     letter-spacing: 2px;
-    font-size: clamp(35px, 2vw, 480px);
+    font-size: 2rem;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-weight: bold;
+    color: ${props => props.theme.TextColor};
     svg{
       width: 30px;
       height: 30px;
@@ -87,10 +92,11 @@ const Button4 = styled.button`
     
   }
   @media screen and (max-width: 480px){
-  padding: 3rem;
+  padding: 2.5rem;
   border-radius: 30px;
   a{
-    font-size: 1rem;
+    font-size: 21px;
+    gap: 0rem;
   }
 }
 `;

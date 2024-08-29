@@ -12,6 +12,7 @@ export const Light = {
     Body: blackA.blackA11,
     TextColor: orange.orange7,
     Color: orange.orange1,
+    logo: "#FCE181",
 };
   
 export const Dark = {

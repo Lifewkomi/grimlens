@@ -35,6 +35,14 @@ display: flex;
 flex-direction: column;
 margin-top: 12rem;
 align-items: center;
+@media screen and (max-width: 480px){
+  flex-basis: 48%;
+max-width: 60%;
+display: flex;
+flex-direction: column;
+margin-top: 12rem;
+align-items: center;   
+  }
 `
 
 const Title = styled.h1`
@@ -48,6 +56,18 @@ const Title = styled.h1`
   background: linear-gradient(135deg, #fff 50%, #ffc107 50%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  @media screen and (max-width: 480px){
+    font-family: ${props => props.theme.Font2};
+  font-size: clamp(35px, 10vw, 480px);
+  color: ${props => props.theme.TextColor};
+  text-align: center;
+  font-weight: bolder;
+  line-height: 1.1;
+  color: ${props => props.theme.Color};
+  background: linear-gradient(135deg, #fff 50%, #ffc107 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;5
+  }
 `;
 
 const Subtitle = styled.p`
@@ -140,7 +160,7 @@ const Home = () => {
         <Title>GrimLens</Title>
         <Subtitle>
             Welcome to the official Grimlens Automotive Photography Portfolio website!
-            This project showcases the dynamic and captivating automotive photography by Grimlens, featuring sleek animations and a smooth user experience.
+            This project showcases the dynamic and captivating automotive photography by Grimlens, featuring all genres and flavors of automotive excellence.
         </Subtitle>
         <ButtonContainer>
           <ButtonPrimary>Me</ButtonPrimary>
