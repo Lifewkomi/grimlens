@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import Gallery from "../components/Gallery";
+import { DoubleArrowRightIcon } from "@radix-ui/react-icons";
+
 
 const Section = styled.section`
   background-color: ${(props) => props.theme.Body};
@@ -8,7 +10,14 @@ const Section = styled.section`
     font-family: ${(props) => props.theme.Font2};
     font-size: clamp(35px, 10vw, 480px);
     color: ${(props) => props.theme.TextColor};
+    font-weight: bold;
   }
+  @media screen and (max-width: 480px){
+  h1{
+    font-size: clamp(35px, 18vw, 480px);
+    color: #fff;
+  }
+}
 `;
 const Buttons = styled.div`
 display: flex;
@@ -17,6 +26,10 @@ justify-content: space-between;
 position: relative;
 width: 60%;
 left: 30rem;
+@media screen and (max-width: 480px){
+  left: 8px;
+  width: 95%;
+}
 `;
 
 const Button1 = styled.button`
@@ -25,6 +38,10 @@ const Button1 = styled.button`
   padding: 2rem;
   margin-bottom: 5rem;
   border-radius: 1rem;
+  @media screen and (max-width: 480px){
+  padding: 1rem;
+  border-radius: 10px;
+}
   
 `;
 const Button2 = styled.button`
@@ -33,6 +50,10 @@ const Button2 = styled.button`
   padding: 4rem;
   margin-bottom: 5rem;
   border-radius: 2rem;
+  @media screen and (max-width: 480px){
+  padding: 2rem;
+  border-radius: 20px;
+}
   
 `;
 const Button3 = styled.button`
@@ -41,7 +62,10 @@ const Button3 = styled.button`
   padding: 6rem;
   margin-bottom: 5rem;
   border-radius: 3rem;
-  
+  @media screen and (max-width: 480px){
+  padding: 3rem;
+  border-radius: 30px;
+}
 `;
 const Button4 = styled.button`
   position: relative;
@@ -55,8 +79,20 @@ const Button4 = styled.button`
     line-height: 1rem;
     letter-spacing: 2px;
     font-size: clamp(35px, 2vw, 480px);
+    display: flex;
+    svg{
+      width: 30px;
+      height: 30px;
+    }
     
   }
+  @media screen and (max-width: 480px){
+  padding: 3rem;
+  border-radius: 30px;
+  a{
+    font-size: 1rem;
+  }
+}
 `;
 
 const About = () => {
@@ -72,7 +108,10 @@ const About = () => {
         <Button3>
         </Button3>
         <Button4>
-          <a href="https://www.instagram.com/grimlens/">More</a>
+          <a href="https://www.instagram.com/grimlens/">
+            More
+            <DoubleArrowRightIcon/>
+          </a>
         </Button4>
       </Buttons>
     </Section>

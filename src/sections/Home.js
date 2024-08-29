@@ -20,6 +20,13 @@ const Section = styled.section`
   justify-content: space-between;
   align-items: flex-start;
   overflow: hidden;
+  @media screen and (max-width: 480px){
+    flex-direction: column;
+    
+  }
+  @media screen and (max-width: 780px){
+    
+  }
 `;
 const IntroText = styled.div`
 flex-basis: 48%;
