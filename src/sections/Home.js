@@ -29,44 +29,35 @@ const Section = styled.section`
   }
 `;
 const IntroText = styled.div`
-flex-basis: 48%;
-max-width: 60%;
-display: flex;
-flex-direction: column;
-margin-top: 12rem;
-align-items: center;
-@media screen and (max-width: 480px){
   flex-basis: 48%;
-max-width: 60%;
-display: flex;
-flex-direction: column;
-margin-top: 12rem;
-align-items: center;   
+  max-width: 60%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 12rem;
+  align-items: center;
+  @media screen and (max-width: 480px) {
+    max-width: 100vw;
+    display: flex;
+    flex-direction: column; 
+    margin-top: 6rem;
+    align-items: center;
   }
-`
+`;
 
 const Title = styled.h1`
-  font-family: ${props => props.theme.Font2};
+  font-family: ${(props) => props.theme.Font2};
   font-size: clamp(35px, 10vw, 480px);
-  color: ${props => props.theme.TextColor};
+  color: ${(props) => props.theme.TextColor};
   text-align: center;
   font-weight: bolder;
-  line-height: 1.1;
-  color: ${props => props.theme.Color};
+  line-height: 1;
   background: linear-gradient(135deg, #fff 50%, #ffc107 50%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  @media screen and (max-width: 480px){
-    font-family: ${props => props.theme.Font2};
-  font-size: clamp(35px, 10vw, 480px);
-  color: ${props => props.theme.TextColor};
-  text-align: center;
-  font-weight: bolder;
-  line-height: 1.1;
-  color: ${props => props.theme.Color};
-  background: linear-gradient(135deg, #fff 50%, #ffc107 50%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;5
+  @media screen and (max-width: 480px) {
+    font-size: clamp(35px, 19vw, 480px);
+    line-height: 1;
+    
   }
 `;
 
@@ -78,6 +69,11 @@ const Subtitle = styled.p`
   color: ${props => props.theme.Color};
   font-weight: lighter;
   letter-spacing: 0.5px;
+  @media screen and (max-width: 480px) {
+    font-size: 1.2rem; 
+    text-align: center;
+    margin: 20px 0px;    
+  }
 `;
 
 const ButtonContainer = styled.div`
@@ -159,12 +155,16 @@ const Home = () => {
       <IntroText>
         <Title>GrimLens</Title>
         <Subtitle>
-            Welcome to the official Grimlens Automotive Photography Portfolio website!
-            This project showcases the dynamic and captivating automotive photography by Grimlens, featuring all genres and flavors of automotive excellence.
+            Welcome to the official Grimlens Automotive Photography Portfolio.
+            I aim to showcase dynamic and captivating automotive photography, featuring all genres and flavors of automotive excellence.
         </Subtitle>
         <ButtonContainer>
-          <ButtonPrimary>Me</ButtonPrimary>
-          <ButtonSecondary>Wanna See My Gallery</ButtonSecondary>
+          <ButtonPrimary>
+            <a href='https://www.instagram.com/grimlens.ke'>ME</a>
+          </ButtonPrimary>
+          <ButtonSecondary>
+          <a href='https://www.instagram.com/grimlens.ke'>See My Gallery</a>
+          </ButtonSecondary>
         </ButtonContainer>
       </IntroText>
 

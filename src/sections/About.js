@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Gallery from "../components/Gallery";
 import { DoubleArrowRightIcon } from "@radix-ui/react-icons";
+import { Link } from "react-router-dom";
 
 
 const Section = styled.section`
@@ -38,9 +39,15 @@ const Button1 = styled.button`
   padding: 2rem;
   margin-bottom: 5rem;
   border-radius: 1rem;
+  &:hover {
+    background-color: ${props => props.theme.TextColor};
+    transition: 1ms ease-out;
+    transform: rotateX(360deg);
+  }
   @media screen and (max-width: 480px){
   padding: 1rem;
   border-radius: 10px;
+
 }
   
 `;
@@ -53,7 +60,12 @@ const Button2 = styled.button`
   @media screen and (max-width: 480px){
   padding: 2rem;
   border-radius: 20px;
-}
+  }
+  &:hover{
+    background-color: #b8ff00;
+    transition: 1ms ease-out;
+
+  }
   
 `;
 const Button3 = styled.button`
@@ -65,7 +77,12 @@ const Button3 = styled.button`
   @media screen and (max-width: 480px){
   padding: 3rem;
   border-radius: 30px;
-}
+  }
+  &:hover {
+    background-color: ${props => props.theme.TextColor};
+    transition: 1ms ease-out;
+
+  }
 `;
 const Button4 = styled.button`
   position: relative;
@@ -73,6 +90,11 @@ const Button4 = styled.button`
   padding: 7rem;
   margin-bottom: 5rem;
   border-radius: 4rem;
+  &:hover {
+    background-color: #b8ff00;
+    transition: 1ms ease-out;
+
+  }
   a {
     font-family: ${(props) => props.theme.Font1};
     font-size: 1.5rem;
@@ -85,6 +107,11 @@ const Button4 = styled.button`
     gap: 1rem;
     font-weight: bold;
     color: ${props => props.theme.TextColor};
+    &:hover {
+    color: #000;
+    transition: 100ms ease-out;
+
+  }
     svg{
       width: 30px;
       height: 30px;
@@ -97,6 +124,7 @@ const Button4 = styled.button`
   a{
     font-size: 21px;
     gap: 0rem;
+    
   }
 }
 `;
@@ -114,10 +142,11 @@ const About = () => {
         <Button3>
         </Button3>
         <Button4>
-          <a href="https://www.instagram.com/grimlens/">
+          <a href="../components/Gallery2.js">
             More
             <DoubleArrowRightIcon/>
           </a>
+          
         </Button4>
       </Buttons>
     </Section>
