@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import Gallery from "../components/Gallery";
 import { DoubleArrowRightIcon } from "@radix-ui/react-icons";
-import { Link } from "react-router-dom";
 
 
 const Section = styled.section`
