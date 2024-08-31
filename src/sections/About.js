@@ -17,6 +17,7 @@ const Section = styled.section`
   h1{
     font-size: clamp(35px, 18vw, 480px);
     color: #fff;
+    text-align: center;
   }
 }
 `;
@@ -42,7 +43,6 @@ const Button1 = styled.button`
   &:hover {
     background-color: ${props => props.theme.TextColor};
     transition: 1ms ease-out;
-    transform: rotateX(360deg);
   }
   @media screen and (max-width: 480px){
   padding: 1rem;

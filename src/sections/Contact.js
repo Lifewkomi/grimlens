@@ -2,8 +2,7 @@ import { motion } from "framer-motion";
 import React from "react";
 import styled from "styled-components";
 import { TriangleRightIcon } from "@radix-ui/react-icons";
-import { SocialIcon } from "react-social-icons";
-import { IconBrandGmail, IconMail, IconMailBitcoin } from "@tabler/icons-react";
+import {IconBrandInstagram, IconBrandTiktok, IconBrandWhatsapp, IconMail} from "@tabler/icons-react";
 
 const Section = styled.section`
   background-color: rgba(0, 0, 0, 0.9);
@@ -41,6 +40,7 @@ const Title = styled.div`
     flex-direction: column;
     h1 {
       font-size: clamp(35px, 19vw, 480px);
+      line-height: 8rem;
     }
     svg {
       display: none;
@@ -62,29 +62,40 @@ const SubTitle = styled.div`
     gap: 2rem;
   }
 `;
-
 const Icons = styled.div`
   display: flex;
-  gap: 2rem;
+  /* gap: 2rem; */
+  .icons{
+    width: 140px;
+    height: 140px;
+    border-radius: 20%;
+  }
+  svg{
+    width: 140px;
+    height: 140px;
+  }
+  @media screen and (max-width: 480px){
+    width: 100vw;
+    svg{
+      width: 100px;
+        height: 100px;
+        border-radius: 0;
+  }
+  }
 `;
-const SocialMotionIcon = styled(motion.div)`
-  /* .social-icon{
-    width: 150px;
-    height: 150px;
-  } */
-`;
+
 const Address = styled.div`
   display: flex;
   flex-direction: column;
   div {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     gap: 2rem;
     a {
       font-family: ${(props) => props.theme.Font1};
       font-size: 1.5rem;
-      color: ${(props) => props.theme.TextColor};
+      color: ${(props) => props.theme.Color};
     }
     :nth-child(2) {
       color: #b8ff00;
@@ -92,17 +103,18 @@ const Address = styled.div`
   }
   h2 {
     font-family: ${(props) => props.theme.Font2};
-    color: ${(props) => props.theme.Color};
+    color: ${(props) => props.theme.TextColor};
     font-size: clamp(35px, 90px, 480px);
     font-weight: bold;
   }
   .mail{
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
+    gap: 0;
     a{
       font-size: 25px;
-      color: ${props => props.theme.TextColor};
+      color: ${props => props.theme.Color};
     }
   }
   @media screen and (max-width: 480px) {
@@ -110,6 +122,10 @@ const Address = styled.div`
     h2 {
       text-align: center;
       font-size: 45px;
+    }
+    .mail{
+      flex-direction: column;
+      justify-content: center;
     }
   }
 `;
@@ -123,54 +139,39 @@ const Contact = () => {
       </Title>
       <SubTitle>
         <Icons>
-          <SocialMotionIcon
-            whileHover={{ scale: 1.1 }}
+          <motion.div
+            whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.9 }}
+            className="icons"
           >
-            <SocialIcon
-              network="instagram"
-              url="https://www.instagram.com/grimlens.ke"
-              style={{ width: "125px", height: "125px" }}
-            />
-          </SocialMotionIcon>
-          <SocialMotionIcon
-            whileHover={{ scale: 1.1 }}
+            <IconBrandInstagram  color="#DD2A7B"/>
+          </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.9 }}
+            className="icons"
           >
-            <SocialIcon
-              network="whatsapp"
-              url="https://www.whatsapp.com"
-              style={{ width: "125px", height: "125px" }}
-            />
-          </SocialMotionIcon>
-          <SocialMotionIcon
-            whileHover={{ scale: 1.1 }}
+            <IconBrandWhatsapp color="#25D366" />
+          </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.9 }}
+            className="icons"
           >
-            <SocialIcon
-              network="tiktok"
-              url="https://www.tiktok.com@grmlens.ke?t=8pHdkTzsl1h&_r=1"
-              style={{ width: "125px", height: "125px" }}
-              bgColor="rgb(255,255,255,0.2)"
-            />
-          </SocialMotionIcon>
+            <IconBrandTiktok color="#fff" />
+          </motion.div>
         </Icons>
         <Address>
           <div>
-            <a href="https://www.instagram.com/grimlens">Gallery</a>
-            <a href="https://www.instagram.com/grimlens">Bookings</a>
-            <a href="https://www.instagram.com/grimlens">Studio</a>
+            <a href="https://www.instagram.com/grimlens.ke?igsh=MTB2MGljdHowY3U0Nw==">Gallery</a>
+            <a href="https://www.instagram.com/grimlens.ke?igsh=MTB2MGljdHowY3U0Nw==">Bookings</a>
+            <a href="https://www.instagram.com/grimlens.ke?igsh=MTB2MGljdHowY3U0Nw==">Studio</a>
           </div>
           <h2>GET IN TOUCH</h2>
           <div className="mail">
-            <IconMail 
-            width="40px"
-            height="40px"
-            color="#fff" />
-            <a href="philemonkomi46@gmail.com">philemonkomi46@gmail.com</a>
+            <IconMail width="35px" height="35px" color="#b8ff00" />
+            <a href="mailto:grimlenske@gmail.com">grimlenske@gmail.com</a>
           </div>
-          
-          
         </Address>
       </SubTitle>
     </Section>
