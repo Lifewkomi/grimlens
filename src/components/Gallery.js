@@ -46,7 +46,7 @@ const El = styled(motion.div)`
   }
   &:nth-of-type(3) {
     .imageContainer {
-      top: -10vh;
+      top: -15vh;
       left: -25vw;
       width: 20vw;
       height: 45vh;
@@ -61,10 +61,10 @@ const El = styled(motion.div)`
   }
   &:nth-of-type(5) {
     .imageContainer {
-      top: 27.5vh;
-      left: 5vw;
-      width: 20vw;
-      height: 25vh;
+      top: 31.5vh;
+      left: 3.5vw;
+      width: 30vw;
+      height: 33vh;
     }
   }
   &:nth-of-type(6) {
@@ -77,10 +77,10 @@ const El = styled(motion.div)`
   }
   &:nth-of-type(7) {
     .imageContainer {
-      top: 28.5vh;
-      left: 25vw;
-      width: 16vw;
-      height: 27vh;
+      top: 26.5vh;
+      left: 31vw;
+      width: 19vw;
+      height: 24vh;
     }
   }
   &:nth-of-type(8) {
@@ -92,22 +92,22 @@ const El = styled(motion.div)`
     }
   }
 
-  @media screen and (max-width: 480px){
+  @media screen and (max-width: 480px) {
     &:nth-of-type(2) {
-    .imageContainer {
-      top: -30vh;
-      left: 5vw;
-      width: 35vw;
-      height: 30vh;
+      .imageContainer {
+        top: -30vh;
+        left: 5vw;
+        width: 35vw;
+        height: 30vh;
+      }
     }
-  }
-  &:nth-of-type(3) {
-    .imageContainer {
-      top: -17vh;
+    &:nth-of-type(3) {
+      .imageContainer {
+        top: -17vh;
         left: -27vw;
         width: 20vw;
         height: 45vh;
-    }
+      }
     }
   }
   &:nth-of-type(4) {
@@ -120,33 +120,33 @@ const El = styled(motion.div)`
   &:nth-of-type(5) {
     .imageContainer {
       top: 27.5vh;
-    left: 3.5vw;
-    width: 30vw;
-    height: 26vh;
+      left: 3.5vw;
+      width: 30vw;
+      height: 26vh;
     }
   }
   &:nth-of-type(6) {
     .imageContainer {
       top: 24.5vh;
-    left: -27.5vw;
-    width: 30vw;
-    height: 25vh;
+      left: -27.5vw;
+      width: 30vw;
+      height: 25vh;
     }
   }
   &:nth-of-type(7) {
     .imageContainer {
       top: 23.5vh;
-    left: 31vw;
-    width: 23vw;
-    height: 19vh;
+      left: 31vw;
+      width: 23vw;
+      height: 19vh;
     }
   }
   &:nth-of-type(8) {
     .imageContainer {
       top: -30.5vh;
-        left: 36vw;
-        width: 20vw;
-        height: 25vh;
+      left: 36vw;
+      width: 20vw;
+      height: 25vh;
     }
   }
 `;
