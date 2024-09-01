@@ -9,7 +9,7 @@ const Section = styled.section`
   h1 {
     font-family: ${(props) => props.theme.Font2};
     font-size: clamp(35px, 10vw, 480px);
-    color: rgb(255,255,255,0.8);
+    color: rgb(255,255,255,0.9);
     font-weight: bold;
   }
   @media screen and (max-width: 480px){

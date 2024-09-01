@@ -51,6 +51,7 @@ const Title = styled.h1`
   font-weight: bolder;
   line-height: 1;
   background: linear-gradient(135deg, #fff 50%, #ffc107 50%);
+  background-clip: content-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   @media screen and (max-width: 480px) {
