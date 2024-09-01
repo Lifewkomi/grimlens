@@ -8,7 +8,6 @@ export default function FloatingNav({ navItems, className }){
   const [visible, setVisible] = useState(false);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
-    // Check if current is not undefined and is a number
     if (typeof current === "number") {
       const direction = current - scrollYProgress.getPrevious();
 
@@ -47,7 +46,7 @@ export default function FloatingNav({ navItems, className }){
               "relative items-center flex space-x-1 text-orange-300 hover:text-[#b8ff00]"
             )}
           >
-            <span className="block sm:hidden">{navItem.icon}</span>
+            <span className="block sm:hidden ">{navItem.icon}</span>
             <span className="hidden sm:block text-xl font-medium font-neue-montreal">{navItem.name}</span>
           </a>
         ))}

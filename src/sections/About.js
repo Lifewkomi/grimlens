@@ -31,6 +31,10 @@ left: 30rem;
   left: 0px;
   width: 100%;
 }
+@media screen and (max-width: 320px){
+  left: 0px;
+  width: 50%;
+}
 `;
 
 const Button1 = styled.button`
@@ -46,8 +50,11 @@ const Button1 = styled.button`
   @media screen and (max-width: 480px){
   padding: 1rem;
   border-radius: 10px;
-
-}
+  }
+  @media screen and (max-width: 320px){
+    padding: 1rem;
+    border-radius: 32px;
+  }
   
 `;
 const Button2 = styled.button`
@@ -65,6 +72,10 @@ const Button2 = styled.button`
     transition: 1ms ease-out;
 
   }
+  @media screen and (max-width: 320px){
+    padding: 1.5rem;
+    border-radius: 15px;
+  }
   
 `;
 const Button3 = styled.button`
@@ -76,6 +87,10 @@ const Button3 = styled.button`
   @media screen and (max-width: 480px){
   padding: 3rem;
   border-radius: 30px;
+  }
+  @media screen and (max-width: 320px){
+    padding: 2rem;
+    border-radius: 20px;
   }
   &:hover {
     background-color: ${props => props.theme.TextColor};
@@ -124,6 +139,10 @@ const Button4 = styled.button`
     font-size: 21px;
     gap: 0rem;
     
+  }
+  @media screen and (max-width: 320px){
+    padding: 1.9rem;
+    border-radius: 20px;
   }
 }
 `;

@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-import logo from "../Assets/#.png";
+import logo from "../Assets/#1.png";
 import { IconCopyright } from "@tabler/icons-react";
 
 const Section = styled.section`
@@ -66,7 +66,9 @@ const Footer = () => {
         <h1>All RIGHTS RESERVED. 2024</h1>
       </Copyright>
       <LogoContainer>
-        <IMG src={logo} alt="logo" />
+
+        <IMG src={logo} alt="Logo" />
+
         <Name
           whileHover={{ scale: 1.1, y: -5, color: "#000" }}
           whileTap={{ scale: 0.9, y: 0 }}
@@ -74,6 +76,7 @@ const Footer = () => {
         >
           Komi
         </Name>
+
       </LogoContainer>
     </Section>
   );

@@ -163,15 +163,19 @@ const Contact = () => {
         </Icons>
         <Address>
           <div>
-            <a href="https://www.instagram.com/grimlens.ke?igsh=MTB2MGljdHowY3U0Nw==">Gallery</a>
-            <a href="https://www.instagram.com/grimlens.ke?igsh=MTB2MGljdHowY3U0Nw==">Bookings</a>
-            <a href="https://www.instagram.com/grimlens.ke?igsh=MTB2MGljdHowY3U0Nw==">Studio</a>
+            <motion.a whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.9 }} href="https://www.instagram.com/grimlens.ke?igsh=MTB2MGljdHowY3U0Nw==">Gallery</motion.a>
+            <motion.a whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.9 }} href="https://www.instagram.com/grimlens.ke?igsh=MTB2MGljdHowY3U0Nw==">Bookings</motion.a>
+            <motion.a whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.9 }} href="https://www.instagram.com/grimlens.ke?igsh=MTB2MGljdHowY3U0Nw==">Studio</motion.a>
           </div>
           <h2>GET IN TOUCH</h2>
-          <div className="mail">
+          <motion.div whileHover={{ scale: 1.1}}
+            whileTap={{ scale: 0.9 }}className="mail">
             <IconMail width="35px" height="35px" color="#b8ff00" />
             <a href="mailto:grimlenske@gmail.com">grimlenske@gmail.com</a>
-          </div>
+          </motion.div>
         </Address>
       </SubTitle>
     </Section>

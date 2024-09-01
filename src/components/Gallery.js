@@ -2,13 +2,15 @@ import React, { useRef } from "react";
 import styled from "styled-components";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-import img1 from '../Assets/1.webp';
-import img3 from '../Assets/3.jpg';
-import img4 from '../Assets/4.webp';
-import img5 from '../Assets/5.jpg';
+import img1 from '../Assets/mustang.png';
+import img2 from '../Assets/17.jpg';
+import img3 from '../Assets/14.jpg';
+import img4 from '../Assets/20.jpg';
+import img5 from '../Assets/10.jpg';
 import img6 from '../Assets/6.jpg';
-import img7 from '../Assets/7.jpg';
-import img17 from '../Assets/17.jpg';
+import img7 from '../Assets/11.jpg';
+import img8 from '../Assets/23.jpg';
+
 
 const Section = styled.section`
   background-color: ${props => props.theme.Body};
@@ -75,10 +77,76 @@ const El = styled(motion.div)`
   }
   &:nth-of-type(7) {
     .imageContainer {
-      top: 22.5vh;
+      top: 28.5vh;
       left: 25vw;
-      width: 15vw;
-      height: 15vh;
+      width: 16vw;
+      height: 27vh;
+    }
+  }
+  &:nth-of-type(8) {
+    .imageContainer {
+      top: -28.5vh;
+      left: 34vw;
+      width: 20vw;
+      height: 25vh;
+    }
+  }
+
+  @media screen and (max-width: 480px){
+    &:nth-of-type(2) {
+    .imageContainer {
+      top: -30vh;
+      left: 5vw;
+      width: 35vw;
+      height: 30vh;
+    }
+  }
+  &:nth-of-type(3) {
+    .imageContainer {
+      top: -17vh;
+        left: -27vw;
+        width: 20vw;
+        height: 45vh;
+    }
+    }
+  }
+  &:nth-of-type(4) {
+    .imageContainer {
+      left: 27.5vw;
+      width: 25vw;
+      height: 25vh;
+    }
+  }
+  &:nth-of-type(5) {
+    .imageContainer {
+      top: 27.5vh;
+    left: 3.5vw;
+    width: 30vw;
+    height: 26vh;
+    }
+  }
+  &:nth-of-type(6) {
+    .imageContainer {
+      top: 24.5vh;
+    left: -27.5vw;
+    width: 30vw;
+    height: 25vh;
+    }
+  }
+  &:nth-of-type(7) {
+    .imageContainer {
+      top: 23.5vh;
+    left: 31vw;
+    width: 23vw;
+    height: 19vh;
+    }
+  }
+  &:nth-of-type(8) {
+    .imageContainer {
+      top: -30.5vh;
+        left: 36vw;
+        width: 20vw;
+        height: 25vh;
     }
   }
 `;
@@ -87,11 +155,13 @@ const ImageContainer = styled.div`
   position: relative;
   width: 25vw;
   height: 25vh;
+  
   img {
     object-fit: cover;
     width: 100%;
     height: 100%;
     border-radius: 15px;
+    
   }
 `;
 const Gallery = () => {
@@ -114,7 +184,7 @@ const Gallery = () => {
       scale: scale4,
     }, 
     {
-      src: img17,
+      src: img2,
       scale: scale5,
     },
     {
@@ -123,19 +193,23 @@ const Gallery = () => {
     },
     {
       src: img4,
-      scale: scale8,
+      scale: scale6,
     },
     {
       src: img5,
-      scale: scale9,
-    },
-    {
-      src: img6,
       scale: scale7,
     },
     {
-      src: img7,
+      src: img6,
       scale: scale9,
+    },
+    {
+      src: img7,
+      scale: scale8,
+    },
+    {
+      src: img8,
+      scale: scale8,
     }
 ]
 
