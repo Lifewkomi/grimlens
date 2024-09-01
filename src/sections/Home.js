@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import img1 from '../Assets/1.webp';
 import img2 from '../Assets/2.jpg';
 import img3 from '../Assets/3.jpg';
-import img4 from '../Assets/4.webp';
 import img5 from '../Assets/5.jpg';
 import img6 from '../Assets/6.jpg';
 import img7 from '../Assets/7.jpg';
