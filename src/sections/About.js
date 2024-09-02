@@ -160,7 +160,7 @@ const About = () => {
         <Button3>
         </Button3>
         <Button4>
-          <a href="../components/Gallery2.js">
+          <a>
             More
             <DoubleArrowRightIcon/>
           </a>

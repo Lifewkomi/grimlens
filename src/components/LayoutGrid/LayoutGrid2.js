@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import{ cn } from "../../lib/util";
 
-const LayoutGrid = ({ cards }) => {
+const LayoutGrid2 = ({ cards }) => {
   const [selected, setSelected] = useState(null);
   const [lastSelected, setLastSelected] = useState(null);
 
@@ -17,7 +17,7 @@ const LayoutGrid = ({ cards }) => {
   };
 
   return (
-    <div className="w-full h-screen p-10 grid grid-cols-1 md:grid-cols-6 max-w-7xl mx-auto gap-4 relative bg-black">
+    <div className="w-full h-screen p-10 grid grid-cols-6 md:grid-rows-2 max-w-7xl mx-auto gap-4 relative bg-black">
       {cards.map((card, i) => (
         <div key={i} className={cn(card.className, "")}>
           <motion.div
@@ -103,4 +103,4 @@ const SelectedCard = ({ selected }) => {
   );
 };
 
-export default LayoutGrid;
+export default LayoutGrid2;

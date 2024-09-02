@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence,useScroll,useMotionValueEvent,} from "framer-motion";
 import{ cn } from "../../lib/util";
+import { Link } from 'react-router-dom';
 
 export default function FloatingNav({ navItems, className }){
   const { scrollYProgress } = useScroll();
@@ -39,21 +40,23 @@ export default function FloatingNav({ navItems, className }){
         )}
       >
         {navItems.map((navItem, idx) => (
-          <a
-            key={`link=${idx}`}
-            href={navItem.link}
-            className={cn(
-              "relative items-center flex space-x-1 text-orange-300 hover:text-[#b8ff00]"
-            )}
-          >
-            <span className="block sm:hidden ">{navItem.icon}</span>
-            <span className="hidden sm:block text-xl font-medium font-neue-montreal">{navItem.name}</span>
-          </a>
+          <Link 
+          key={`link=${idx}`}
+          to={navItem.link} 
+          className={cn(
+            "relative items-center flex space-x-1 text-orange-300 hover:text-[#b8ff00]"
+          )}
+        >
+          <span className="block sm:hidden ">{navItem.icon}</span>
+          <span className="hidden sm:block text-xl font-medium font-neue-montreal">{navItem.name}</span>
+        </Link>
+          
         ))}
         
       </motion.div>
     </AnimatePresence>
   );
 };
+
 
 

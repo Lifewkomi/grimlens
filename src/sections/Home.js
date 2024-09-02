@@ -1,30 +1,31 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import img1 from '../Assets/1.webp';
-import img2 from '../Assets/2.jpg';
-import img3 from '../Assets/3.jpg';
-import img5 from '../Assets/5.jpg';
-import img6 from '../Assets/6.jpg';
-import img7 from '../Assets/7.jpg';
-import img8 from '../Assets/8.jpg';
-import img9 from '../Assets/9.jpg';
-import img13 from '../Assets/13.jpg';
+import img1 from "../Assets/1.webp";
+import img2 from "../Assets/2.jpg";
+import img3 from "../Assets/3.jpg";
+import img5 from "../Assets/5.jpg";
+import img6 from "../Assets/6.jpg";
+import img7 from "../Assets/7.jpg";
+import img8 from "../Assets/8.jpg";
+import img9 from "../Assets/9.jpg";
+import img13 from "../Assets/13.jpg";
+import About from "./About";
+import Contact from "./Contact";
+import Footer from "./Footer";
 
 const Section = styled.section`
-  background-color: ${props => props.theme.Body};
+  background-color: ${(props) => props.theme.Body};
   min-height: 150vh;
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   overflow: hidden;
-  @media screen and (max-width: 480px){
+  @media screen and (max-width: 480px) {
     flex-direction: column;
-    
   }
-  @media screen and (max-width: 780px){
-    
+  @media screen and (max-width: 780px) {
   }
 `;
 const IntroText = styled.div`
@@ -37,7 +38,7 @@ const IntroText = styled.div`
   @media screen and (max-width: 480px) {
     max-width: 100vw;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     margin-top: 6rem;
     align-items: center;
   }
@@ -57,22 +58,21 @@ const Title = styled.h1`
   @media screen and (max-width: 480px) {
     font-size: clamp(35px, 19vw, 480px);
     line-height: 1;
-    
   }
 `;
 
 const Subtitle = styled.p`
   margin: 20px 80px;
-  font-family: ${props => props.theme.Font2};
+  font-family: ${(props) => props.theme.Font2};
   text-align: center;
   font-size: 1rem;
-  color: ${props => props.theme.Color};
+  color: ${(props) => props.theme.Color};
   font-weight: lighter;
   letter-spacing: 0.5px;
   @media screen and (max-width: 480px) {
-    font-size: 1.2rem; 
+    font-size: 1.2rem;
     text-align: center;
-    margin: 20px 0px;    
+    margin: 20px 0px;
   }
 `;
 
@@ -87,7 +87,7 @@ const ButtonPrimary = styled.button`
   color: #000;
   border: none;
   border-radius: 8px;
-  font-family: ${props => props.theme.Font1};
+  font-family: ${(props) => props.theme.Font1};
   font-size: 1.2rem;
   cursor: pointer;
 
@@ -102,7 +102,7 @@ const ButtonSecondary = styled.button`
   color: #000;
   border: none;
   border-radius: 8px;
-  font-family: ${props => props.theme.Font1};
+  font-family: ${(props) => props.theme.Font1};
   font-size: 1.2rem;
   cursor: pointer;
 
@@ -116,7 +116,7 @@ const PreviewGallery = styled.div`
   gap: 10px;
   flex-basis: 52%;
   /* max-width: 40%; */
-`
+`;
 const ImageRow = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -135,7 +135,6 @@ const ImageRow = styled.div`
   &:nth-child(3) {
     transform: translateX(10%);
     transform: translateY(-20%);
-
   }
 `;
 const ImageItem = styled.img`
@@ -148,45 +147,51 @@ const ImageItem = styled.img`
   &:hover {
     transform: scale(1.05);
   }
-`
+`;
 const Home = () => {
   return (
-    <Section>
-      <IntroText>
-        <Title>GrimLens</Title>
-        <Subtitle>
-            Welcome to the official Grimlens Automotive Photography Portfolio.
-            I aim to showcase dynamic and captivating automotive photography, featuring all genres and flavors of automotive excellence.
-        </Subtitle>
-        <ButtonContainer>
-          <ButtonPrimary>
-            <a href='https://www.instagram.com/grimlens.ke'>ME</a>
-          </ButtonPrimary>
-          <ButtonSecondary>
-          <a href='https://www.instagram.com/grimlens.ke'>See My Gallery</a>
-          </ButtonSecondary>
-        </ButtonContainer>
-      </IntroText>
+    <>
+      <Section>
+        <IntroText>
+          <Title>GrimLens</Title>
+          <Subtitle>
+            Welcome to the official Grimlens Automotive Photography Portfolio. I
+            aim to showcase dynamic and captivating automotive photography,
+            featuring all genres and flavors of automotive excellence.
+          </Subtitle>
+          <ButtonContainer>
+            <ButtonPrimary>
+              <a href="https://www.instagram.com/grimlens.ke">ME</a>
+            </ButtonPrimary>
+            <ButtonSecondary>
+              <a href="https://www.instagram.com/grimlens.ke">See My Gallery</a>
+            </ButtonSecondary>
+          </ButtonContainer>
+        </IntroText>
 
-      <PreviewGallery>
-        <ImageRow>
-          <ImageItem src={img1} alt="Image 1" />
-          <ImageItem src={img13} alt="Image 2" />
-          <ImageItem src={img3} alt="Image 3" />
-        </ImageRow>
-        <ImageRow>
-          <ImageItem src={img2} alt="Image 4" />
-          <ImageItem src={img5} alt="Image 5" />
-          <ImageItem src={img6} alt="Image 6" />
-        </ImageRow>
-        <ImageRow>
-          <ImageItem src={img7} alt="Image 7" />
-          <ImageItem src={img8} alt="Image 8" />
-          <ImageItem src={img9} alt="Image 9" />
-        </ImageRow>
-      </PreviewGallery>
-    </Section>
-  )
-}
+        <PreviewGallery>
+          <ImageRow>
+            <ImageItem src={img1} alt="Image 1" />
+            <ImageItem src={img13} alt="Image 2" />
+            <ImageItem src={img3} alt="Image 3" />
+          </ImageRow>
+          <ImageRow>
+            <ImageItem src={img2} alt="Image 4" />
+            <ImageItem src={img5} alt="Image 5" />
+            <ImageItem src={img6} alt="Image 6" />
+          </ImageRow>
+          <ImageRow>
+            <ImageItem src={img7} alt="Image 7" />
+            <ImageItem src={img8} alt="Image 8" />
+            <ImageItem src={img9} alt="Image 9" />
+          </ImageRow>
+        </PreviewGallery>
+      </Section>
+      <About />
+      <Contact />
+      <Footer />
+    </>
+  );
+};
 
 export default Home;

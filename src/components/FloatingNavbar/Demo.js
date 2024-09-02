@@ -1,6 +1,9 @@
-import React from 'react'
+import React from 'react';
 import FloatingNav from "./floatingnavbar";
 import { IconHome, IconMessage, IconUser } from '@tabler/icons-react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Gallery2 from '../Gallery2';
+import Contact from '../../sections/Contact';
 
 export default function Demo() {
   const navItems = [
@@ -22,9 +25,13 @@ export default function Demo() {
   ];
 
   return (
-    <div className='relative w-full'>
-      <FloatingNav navItems={navItems} />
-    </div>
-  )
+    <>
+    <FloatingNav navItems={navItems} />
+      <Routes>
+        <Route path="/gallery" element={<Gallery2 />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </>
+      
+  );
 }
-
