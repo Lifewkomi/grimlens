@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Gallery from "../components/Gallery";
 import { DoubleArrowRightIcon } from "@radix-ui/react-icons";
+import { Link } from 'react-router-dom';
 
 
 const Section = styled.section`
@@ -160,11 +161,10 @@ const About = () => {
         <Button3>
         </Button3>
         <Button4>
-          <a>
+        <Link to="/gallery">
             More
-            <DoubleArrowRightIcon/>
-          </a>
-          
+            <DoubleArrowRightIcon />
+          </Link>
         </Button4>
       </Buttons>
     </Section>
