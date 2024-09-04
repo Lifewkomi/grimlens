@@ -212,7 +212,7 @@ export default function LayoutGridDemo() {
   return (
     <div className=" w-full bg-black">
       <LayoutGrid cards={cards} />
-      {/* <LayoutGrid2 cards={cards2} /> */}
+      <LayoutGrid2 cards={cards2} />
     </div>
   );
 }
