@@ -35,7 +35,7 @@ function App() {
           <main className="App">
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/gallery" element={<Gallery2 />} />
+              {/* <Route path="/gallery" element={<Gallery2 />} /> */}
             </Routes>
             
           </main>

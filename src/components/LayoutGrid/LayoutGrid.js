@@ -17,7 +17,7 @@ const LayoutGrid = ({ cards }) => {
   };
 
   return (
-    <div className="w-full h-screen p-10 grid grid-cols-1 md:grid-cols-6 max-w-7xl mx-auto gap-4 relative bg-black">
+    <div className="w-full h-[200vh] md:h-screen p-10 grid grid-cols-1 md:grid-cols-6 max-w-7xl mx-auto gap-4 relative bg-black">
       {cards.map((card, i) => (
         <div key={i} className={cn(card.className, "")}>
           <motion.div

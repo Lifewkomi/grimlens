@@ -135,31 +135,31 @@ const cards = [
   {
     id: 3,
     content: <SkeletonThree />,
-    className: "col-span-1",
+    className: "col-span-2 md:col-span-1",
     thumbnail: Image3,
   },
   {
     id: 4,
     content: <SkeletonFour />,
-    className: "md:col-span-2",
+    className: "col-span-2",
     thumbnail: Image4,
   },
   {
     id: 5,
     content: <SkeletonFive />,
-    className: "md:col-span-2",
+    className: "col-span-2",
     thumbnail: Image5,
   },
   {
     id: 6,
     content: <SkeletonSix />,
-    className: "md:col-span-2",
+    className: "col-span-2",
     thumbnail: Image13,
   },
   {
     id: 7,
     content: <SkeletonSeven />,
-    className: "md:col-span-2",
+    className: "col-span-2",
     thumbnail: Image12,
   },
 ];
@@ -210,9 +210,9 @@ const cards2 =[
 
 export default function LayoutGridDemo() {
   return (
-    <div className="h-screen w-full bg-black">
+    <div className=" w-full bg-black">
       <LayoutGrid cards={cards} />
-      <LayoutGrid2 cards={cards2} />
+      {/* <LayoutGrid2 cards={cards2} /> */}
     </div>
   );
 }
