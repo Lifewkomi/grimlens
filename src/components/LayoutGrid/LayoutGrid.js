@@ -26,7 +26,7 @@ const LayoutGrid = ({ cards }) => {
               card.className,
               "relative overflow-hidden",
               selected?.id === card.id
-                ? "rounded-lg cursor-pointer absolute inset-0 h-[85%] w-full md:w-1/2 m-auto z-50 flex justify-center items-center flex-wrap flex-col"
+                ? "rounded-lg cursor-pointer absolute inset-0 h-[25%] sm:h-[85%] px-4 w-full md:w-1/2 m-auto z-50 flex justify-center items-center flex-wrap flex-col"
                 : lastSelected?.id === card.id
                 ? "z-40 bg-white rounded-xl h-full w-full"
                 : "bg-white rounded-xl h-full w-full"
@@ -56,7 +56,7 @@ const ImageComponent = ({ card }) => {
       layoutId={`image-${card.id}-image`}
       src={card.thumbnail}
       height="500"
-      width="500"
+      width="400"
       className={cn(
         "object-cover object-top absolute inset-0 h-full w-full transition duration-200"
       )}
@@ -67,7 +67,7 @@ const ImageComponent = ({ card }) => {
 
 const SelectedCard = ({ selected }) => {
   return (
-    <div className="bg-transparent h-full w-full flex flex-col justify-end rounded-lg shadow-2xl relative z-[60]">
+    <div className="bg-transparent h-full w-full p-4 flex flex-col justify-end rounded-lg shadow-2xl relative z-[60]">
       <motion.div
         initial={{
           opacity: 0,
