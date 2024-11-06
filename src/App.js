@@ -11,6 +11,7 @@ import About from "./sections/About";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
 import Gallery2 from "./components/Gallery2";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   useEffect(() => {
@@ -35,7 +36,7 @@ function App() {
           <main className="App">
             <Routes>
               <Route path="/" element={<Home />} />
-              {/* <Route path="/gallery" element={<Gallery2 />} /> */}
+              <Analytics />
             </Routes>
             
           </main>
