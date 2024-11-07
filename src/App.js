@@ -36,8 +36,8 @@ function App() {
           <main className="App">
             <Routes>
               <Route path="/" element={<Home />} />
-              <Analytics />
             </Routes>
+            <Analytics />  
             
           </main>
       </ThemeProvider>
